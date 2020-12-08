@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { BookContext } from '../contexts/BookContext';
-// import { read } from 'fs';
-
+import BookDetails from './BookDetails'
 
 const BookList = () => {
-    const { book } = useContext(BookContext)
+    const { books } = useContext(BookContext)
     return books.length ? (
         <div className='book-list'>
             <ul>
@@ -15,7 +14,7 @@ const BookList = () => {
         </div>
     ) : (
             <div className='empty'>
-                No Books to read. Hello free time
+                No Books to read. Hello free time :)
             </div >
         );
 }
